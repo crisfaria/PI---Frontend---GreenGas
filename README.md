@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Calculadora de Biodigestor
+Este projeto é uma aplicação web desenvolvida em React para calcular as dimensões de um biodigestor com base na quantidade de gado. Ele foi criado para ajudar agricultores e profissionais do setor a dimensionar adequadamente seus biodigestores, garantindo eficiência e sustentabilidade.
 
-## Getting Started
 
-First, run the development server:
+Funcionalidades
+Cálculo de Volume: Com base na quantidade de gado inserida pelo usuário, a aplicação calcula o volume do biodigestor e outros parâmetros importantes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Interface Intuitiva: Interface amigável e fácil de usar, com componentes reutilizáveis.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Resultados Detalhados: Exibição dos resultados dos cálculos com detalhes precisos.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Tecnologias Utilizadas
+React: Biblioteca JavaScript para construção de interfaces de usuário.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+CSS: Estilização da aplicação para um visual atraente e responsivo.
 
-## Learn More
+Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-To learn more about Next.js, take a look at the following resources:
+Estrutura de Arquivos
+public/: Contém arquivos estáticos, como imagens.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+BiodigestorImg.png: Imagem ilustrativa do biodigestor.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+src/: Código-fonte da aplicação.
 
-## Deploy on Vercel
+components/: Componentes reutilizáveis.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Header.js: Cabeçalho da aplicação.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Footer.js: Rodapé da aplicação.
+
+Main.js: Componente principal que contém a lógica dos cálculos.
+
+Button.js: Componente de botão reutilizável.
+
+Input.js: Componente de entrada reutilizável.
+
+styles/: Arquivos de estilo.
+
+globals.css: Estilos globais da aplicação.
+
+App.js: Componente principal que orquestra os outros componentes.
+
+index.js: Ponto de entrada do React.
+
