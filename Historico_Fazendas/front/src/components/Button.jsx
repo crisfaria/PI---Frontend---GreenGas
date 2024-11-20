@@ -1,10 +1,10 @@
-const Button = ({ onClick, children, className }) => {
+function Botao (props) {
     return (
-      <button onClick={onClick} className={`bg-green-600 text-white p-2 rounded ${className}`}>
-        {children}
+      <button onClick={onClick} >{props.children}
+        {Atualizar}
       </button>
     );
   };
   
-  export default Button;
+  export default Botao;
   
