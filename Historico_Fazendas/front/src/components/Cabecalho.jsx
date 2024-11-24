@@ -1,6 +1,6 @@
-function Cabecalho() {
+function Cabecalho(props) {
     return (
-     <header>
+     <header>{props.children}
        <h1>Fazendas</h1>
        <Menu />
      </header>

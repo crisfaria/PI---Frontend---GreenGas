@@ -1,6 +1,6 @@
-function Menu() {
+function Menu(props) {
     return (
-     <nav>
+     <nav>{props.children}
        <ul>
         <li>
           <NavLink to="/">Listar fazendas</NavLink>
