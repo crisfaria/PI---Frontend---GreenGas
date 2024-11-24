@@ -1,3 +1,5 @@
+import React from "react";
+import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NovaFazenda from "./pages/Nova";
 import Listar from "./pages/Listar";
@@ -13,7 +15,7 @@ function App() {
         <Route path="/" element={<Listar />} />
         <Route path="/novaFazenda" element={<NovaFazenda />} />
         <Route path="/editar/:id" element={<Editar />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="*" element={<h1>Erro 404 - Página não encontrada</h1>} />
       </Routes>
     </BrowserRouter>
   );
