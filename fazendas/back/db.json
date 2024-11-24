@@ -12,6 +12,20 @@
       "localizacao": "Iesb SUL",
       "tamanho": 5000,
       "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "2369",
+      "nome": "Lugar ao Sol",
+      "localizacao": "Guara",
+      "tamanho": 6000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "2eb5",
+      "nome": "Lugar ao Sol",
+      "localizacao": "Guara",
+      "tamanho": 6000,
+      "imagem": ".../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }
