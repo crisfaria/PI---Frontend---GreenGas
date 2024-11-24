@@ -1,0 +1,17 @@
+{
+  "fazendas": [
+    {
+      "id": "1",
+      "nome": "Fazenda Boa Vista",
+      "localizacao": "São Paulo",
+      "tamanho": 350
+    },
+    {
+      "id": "82ec",
+      "nome": "ReginaldosFarm",
+      "localizacao": "Iesb SUL",
+      "tamanho": 5000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    }
+  ]
+}
