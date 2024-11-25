@@ -1,3 +1,5 @@
+import { remover } from "../services/ContatoService";
+
 function Botao (props) {
     return (
       <button onClick={onClick} >{props.children}
