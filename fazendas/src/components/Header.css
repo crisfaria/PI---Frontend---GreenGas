@@ -10,7 +10,7 @@
   position: fixed; /* Fixado no topo */
   top: 0;
   left: 0;
-  width: 97%; /* Ocupa toda a largura da tela */
+  width: 98%; /* Ocupa toda a largura da tela */
   z-index: 10; /* Garante que o cabeçalho fique acima dos outros elementos */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }

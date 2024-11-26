@@ -23,8 +23,10 @@ function FazendasCadastradas() {
   }, []); // O array vazio faz com que a requisição seja feita apenas uma vez, quando o componente é montado
 
   return (
+    <><Header /> {/* Componente do header */}
+    <main>
     <div className="fazendas-cadastradas-container">
-      <Header /> {/* Componente do header */}
+      
 
       {/* Container para as fazendas listadas */}
       <div className="fazendas-list">
@@ -39,6 +41,8 @@ function FazendasCadastradas() {
         ))}
       </div>
     </div>
+    </main>
+    </>
   );
 }
 

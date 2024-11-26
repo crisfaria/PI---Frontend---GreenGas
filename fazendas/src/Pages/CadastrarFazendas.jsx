@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importando useNavigate
+import { useNavigate } from "react-router-dom"; 
 import Header from "../components/Header";
 import axios from "axios";
-import "./CadastrarFazendas.css"; // Importando o CSS para a página
+import "./CadastrarFazendas.css"; 
 
 function CadastrarFazendas() {
   const [nome, setNome] = useState("");
@@ -16,20 +16,20 @@ function CadastrarFazendas() {
   const handleImagemChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // A imagem não será realmente carregada, vamos simular com uma URL fictícia
+      // A imagem não será realmente carregada, estou simulando com uma URL fictícia
       setImagem("../src/image/istockphoto-863542630-612x612.jpg"); // Simulação de imagem
     }
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // A imagem fake será substituída por uma URL simulada
     const novaFazenda = {
       nome,
       localizacao,
       tamanho: parseInt(tamanho),
-      imagem: imagem || ".../src/image/istockphoto-863542630-612x612.jpg", // URL fictícia como imagem
+      imagem: imagem || "../src/image/istockphoto-863542630-612x612.jpg", // URL fictícia como imagem
     };
 
     try {
@@ -38,7 +38,7 @@ function CadastrarFazendas() {
 
       setSucesso(true); // Marca o sucesso do envio
       setTimeout(() => {
-        setSucesso(false); // Oculta a mensagem de sucesso após 3 segundos
+        setSucesso(false); // Oculta a mensagem de sucesso após 2 segundos
         navigate("/fazendas"); // Redireciona para a página de fazendas cadastradas
       }, 2000);
     } catch (error) {
@@ -89,13 +89,13 @@ function CadastrarFazendas() {
             />
           </div>
           <div>
-            <label>Imagem da Fazenda (Simulada)</label>
+            <label>Imagem da Fazenda (Opcional)</label>
             <input
               type="file" // Altera o tipo para "file" para permitir o upload de arquivos
               accept="image/*" // Restringe a seleção a arquivos de imagem
               onChange={handleImagemChange}
             />
-            {imagem && <p>Imagem selecionada: {imagem}</p>}
+            {imagem && <p>Imagem selecionada: {"../src/image/istockphoto-863542630-612x612.jpg"}</p>}
           </div>
           <button type="submit">Criar Fazenda</button>
         </form>

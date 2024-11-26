@@ -1,9 +1,15 @@
+import './Erro404.css'; 
+
 function Erro404() {
-    return (
-      <>
-        <h1>Error 404 - Pagina não encontada</h1>
-      </>
-    );
-  }
-  
-  export default Erro404;
+  return (
+    <div className="erro-container">
+      <div className="text-center">
+        <h1>404</h1>
+        <p>Página não encontrada!</p>
+        <a href="/">Voltar para a página inicial</a> {/* Link para a página inicial */}
+      </div>
+    </div>
+  );
+}
+
+export default Erro404;
