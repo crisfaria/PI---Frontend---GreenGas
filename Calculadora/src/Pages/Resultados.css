@@ -1,0 +1,45 @@
+.calculations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2f855a;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  thead {
+    background-color: #38a169;
+    color: white;
+  }
+  
+  tbody tr:hover {
+    background-color: #f0fff4;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: #38a169;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: #2f855a;
+    text-decoration: underline;
+  }
+  
