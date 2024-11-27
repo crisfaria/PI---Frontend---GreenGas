@@ -6,7 +6,7 @@ function Menu(props) {
           <NavLink to="/">Listar fazendas</NavLink>
         </li>
         <li>
-          <NavLink to="/novaFazenda">Nova fazenda</NavLink>
+          <NavLink to="/fazendas">Fazendas</NavLink>
         </li>
         <li>
            <NavLink to="/">Sair</NavLink>

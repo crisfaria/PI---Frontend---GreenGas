@@ -1,21 +1,17 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NovaFazenda from "./pages/Nova";
-import Listar from "./pages/Listar";
-import Editar from "./pages/Editar";
-import Error404 from "./pages/Error404";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TelaUsuario from "./pages/TelaUsuario";
+import Erro404 from "./Pages/Erro404";
+import Resultados from "./Pages/Resultados";
 
 function App() {
   return (
-  
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Listar />} />
-        <Route path="/novaFazenda" element={<NovaFazenda />} />
-        <Route path="/editar/:id" element={<Editar />} />
-        <Route path="*" element={<h1>Erro 404 - Página não encontrada</h1>} />
+        <Route path="/" element={<TelaUsuario />} />
+        <Route path="/resultados" element={<Resultados />} />
+        <Route path="*" element={<Erro404 />} />
       </Routes>
     </BrowserRouter>
   );

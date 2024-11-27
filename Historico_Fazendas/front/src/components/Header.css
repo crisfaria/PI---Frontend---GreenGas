@@ -1,46 +1,54 @@
 /* Header fixo no topo */
 .header {
-    display: flex;
-    justify-content: space-between; /* Espaça a logo e os links */
-    align-items: center; /* Centraliza verticalmente os itens */
-    padding: 0 20px; /* Espaçamento horizontal interno */
-    background-color: #2e8b57; /* Cor de fundo */
-    color: #ffffff; /* Cor do texto */
-    height: 60px; /* Altura do cabeçalho */
-    position: fixed; /* Fixado no topo */
-    top: 0;
-    left: 0;
-    width: 97%; /* Ocupa toda a largura da tela */
-    z-index: 10; /* Garante que o cabeçalho fique acima dos outros elementos */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-  
-  /* Estilo da logo no cabeçalho */
-  .header-logo {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente a logo */
-  }
-  
-  .header-logo img {
-    width: 80px; /* Tamanho da logo */
-    height: auto; /* Mantém a proporção */
-  }
-  
-  /* Navegação no cabeçalho */
-  .header-nav {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os links */
-  }
-  
-  .nav-link {
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 500; /* Peso da fonte */
-    color: #ffffff; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s ease; /* Transição suave na interação */
-  }
-  
-  .nav-link:hover {
-    color: #dcdcdc; /* Cor mais clara ao passar o mouse */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Espaça a logo e os links */
+  align-items: center; /* Centraliza verticalmente os itens */
+  padding: 0 20px; /* Espaçamento horizontal interno */
+  background-color: #2e8b57; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  height: 60px; /* Altura do cabeçalho */
+  position: fixed; /* Fixado no topo */
+  top: 0;
+  left: 0;
+  width: 97%; /* Ocupa toda a largura da tela */
+  z-index: 10; /* Garante que o cabeçalho fique acima dos outros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo da logo no cabeçalho */
+.header-logo {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente a logo */
+}
+
+.header-logo img {
+  width: 80px; /* Tamanho da logo */
+  height: auto; /* Mantém a proporção */
+}
+
+/* Navegação no cabeçalho */
+.header-nav {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+.nav-link {
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  color: #ffffff; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease; /* Transição suave na interação */
+}
+
+.logout{
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  color: #ffffff; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  padding-right: 20px;
+  transition: color 10.9s ease;
+}
+
+.nav-link:hover {
+  color: #dcdcdc; /* Cor mais clara ao passar o mouse */
+}
