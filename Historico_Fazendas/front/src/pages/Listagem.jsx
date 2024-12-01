@@ -1,4 +1,4 @@
-function Listagem(props) {
+function Listagem() {
     return (
         <ul>
             <li>
@@ -7,9 +7,10 @@ function Listagem(props) {
             </li>
             {props.itens.map((fazenda, index) => (
                 <li key={index}><span>{fazenda.nome}</span>                   
-                    <span><button onClick={(e) => props.trataAtualizar(fazenda.id)}> Atualizar
-                    </button><button onClick={(e) => props.trataRemover(fazenda.id)}> Remover
-                        </button>
+                    <span><button onClick={(e) => props.trataBuscarTodas(fazenda.id)}> Buscar
+                    </button><button onClick={(e) => props.trataAtualizar(fazenda.id)}> Atualizar
+                        </button><button onClick={(e) => props.trataRemover(fazenda.id)}> Remover
+                            </button>
 
                     </span>
 

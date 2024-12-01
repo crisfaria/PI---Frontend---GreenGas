@@ -1,12 +1,16 @@
-function Menu(props) {
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Menu.css";
+
+function Menu() {
     return (
-     <nav>{props.children}
-       <ul>
+     <nav>
+       <ul className="menu-list">
         <li>
-          <NavLink to="/">Listar fazendas</NavLink>
+          <NavLink to="/">Listar Fazendas</NavLink>
         </li>
         <li>
-          <NavLink to="/fazendas">Fazendas</NavLink>
+          <NavLink to="/fazendas">Historico Fazendas</NavLink>
         </li>
         <li>
            <NavLink to="/">Sair</NavLink>
@@ -16,4 +20,4 @@ function Menu(props) {
     );
   }
 
-export default Menu ();
+export default Menu;

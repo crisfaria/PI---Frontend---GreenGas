@@ -2,10 +2,11 @@ import axios from "axios";
 
 const url = import.meta.env.VITE_API_URL;
 
-function buscarTodas() {
+function buscarTodas(fazenda) {
     return axios
-      .get(url)
-      .then((response) => {
+      .get(`${url}/${fazenda.id}`, {
+      nome: fazenda.nome,      
+    }).then((response) => {
         return { sucesso: true, dados: response.data };
       })
       .catch((error) => {

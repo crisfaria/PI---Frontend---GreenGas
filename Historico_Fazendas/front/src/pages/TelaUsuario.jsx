@@ -1,15 +1,15 @@
 import React from "react";
-import Cabecalho from "../components/Header";
-import Calculator from "../components/Calculator";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
 
 
 function TelaUsuario() {
   return (
     <div>
-      <Cabecalho />
+      <Header />
       <main>
-        <Historico />
+        <Menu />
       </main>
       <Footer/>
     </div>
