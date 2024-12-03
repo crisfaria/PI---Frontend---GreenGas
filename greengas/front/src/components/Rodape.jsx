@@ -1,9 +1,7 @@
+import "./Rodape.css";
+
 function Rodape() {
-  return (
-    <>
-      <h1>Rodapé da Página</h1>
-    </>
-  );
+  return <footer>©2024 GreenGas - Todos os direitos reservados.</footer>;
 }
 
 export default Rodape;

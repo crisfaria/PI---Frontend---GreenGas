@@ -1,0 +1,81 @@
+.conteudoLogin,
+.formContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form,
+.linkContainer {
+  border: 1px solid #2e8b57;
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 21px;
+}
+.linkContainer {
+  padding: 6px;
+  margin-top: 12px;
+}
+form h1 {
+  font-size: 21px;
+  font-weight: 600;
+  border-bottom: 1px dashed #2e8b57;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  border: 1px solid #2e8b57;
+  padding: 6px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  color: #2e8b57;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  outline: #2e8b57;
+  outline-width: 2px;
+  outline-offset: 1px;
+  outline-style: solid;
+}
+
+form input[type="submit"] {
+  background-color: #2e8b57;
+  width: 100%;
+  color: #ffffff;
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 9px;
+}
+
+.erroValidacao {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 120, 0, 0.1),
+    rgba(0, 120, 0, 0.75),
+    rgba(0, 120, 0, 0.1)
+  );
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.esqueceuSenha {
+  cursor: pointer;
+  text-decoration: underline;
+}

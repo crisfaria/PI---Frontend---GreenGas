@@ -1,9 +1,14 @@
-function Login() {
+import FormLogin from "../components/FormLogin";
+import LogoGrande from "../components/LogoGrande";
+import "./Login.css";
+
+function LoginPage() {
   return (
-    <>
-      <h1>Tela de Login</h1>
-    </>
+    <div className="conteudo">
+      <LogoGrande />
+      <FormLogin />
+    </div>
   );
 }
 
-export default Login;
+export default LoginPage;
