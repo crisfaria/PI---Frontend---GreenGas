@@ -82,7 +82,7 @@ function Calculator() {
             Object.entries(results).map(([key, value]) => (
               <tr key={key} className="hover:bg-green-50">
                 <td className="px-4 py-3 font-medium text-gray-700">{key}</td>
-                <td className="px-4 py-3">{value.toFixed(2)}</td>
+                <td className="px-4 py-3 text-gray-700">{value.toFixed(2)}</td>
               </tr>
             ))}
         </tbody>
@@ -107,7 +107,7 @@ function Calculator() {
               <td className="px-4 py-3 font-medium text-gray-700">
                 {entry.date}
               </td>
-              <td className="px-4 py-3">{entry.numCattle}</td>
+              <td className="px-4 py-3 text-gray-700">{entry.numCattle}</td>
               <td className="px-4 py-3">
                 {Object.entries(entry.results)
                   .map(([key, value]) => `${key}: ${value.toFixed(2)} m³`)
