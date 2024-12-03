@@ -1,6 +1,6 @@
 /* Estilos gerais para o footer */
 .footer {
-  background-color: #414141; /* Cor de fundo escura */
+  background-color: #2e8b57; /* Cor de fundo escura */
   color: white; /* Texto branco */
   padding: 20px 0; /* Espaçamento superior e inferior */
   font-family: 'Arial', sans-serif; /* Fonte padrão */
@@ -17,10 +17,12 @@
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center; /* Alinha tudo ao centro */
-  gap: 10px; /* Espaço entre os elementos */
+  gap: 75px; /* Espaço entre os elementos */
+  justify-content:space-evenly ;
 }
+
 
 .branding {
   font-size: 14px; /* Tamanho da fonte para as informações de branding */
@@ -36,13 +38,6 @@
   opacity: 0.8; /* Um pouco de transparência */
 }
 
-.divider {
-  width: 80%;
-  height: 1px;
-  background-color: #555; /* Cor para o divisor */
-  margin: 10px 0;
-}
-
 .developer {
   font-size: 12px;
   margin-bottom: 10px;
@@ -51,7 +46,7 @@
 .developer-info {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinha ao lado esquerdo */
+
 }
 
 .developer-info span {
@@ -73,5 +68,5 @@
 }
 
 .contact:hover {
-  color: #f39c12; /* Cor de destaque ao passar o mouse */
+  color: #000000; /* Cor de destaque ao passar o mouse */
 }

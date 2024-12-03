@@ -73,8 +73,8 @@ function Calculator() {
       <table className="w-full bg-white rounded-lg shadow-md">
         <thead className="bg-green-600 text-white">
           <tr>
-            <th className="px-4 py-3 text-left">Medida</th>
-            <th className="px-4 py-3 text-left">Valor (m³)</th>
+            <th className="px-4 py-3">Medida</th>
+            <th className="px-4 py-3">Valor (m³)</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
@@ -122,54 +122,44 @@ function Calculator() {
 
   return (
     <div className="max-w-4xl mx-auto main-container">
-    
       <div className="bg-white rounded-lg shadow-xl p-6 mb-8 centralizado">
-      
         <h1 className="text-2xl font-bold text-green-700 mb-6">
           Calculadora de Biodigestor
         </h1>
         <form onSubmit={calculate} className="mb-6 label-container">
-        
           <div className="mb-4">
             <label
               htmlFor="numCattle"
               className="block text-sm font-medium text-gray-700 mb-1"
-            >Quantidade de Gado
-            
-            <input
-              type="number"
-              id="numCattle"
-              value={numCattle}
-              onChange={(e) => setNumCattle(parseInt(e.target.value))}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              required/>
-              </label>
-           
-
+            >
+              Quantidade de Gado
+              <input
+                type="number"
+                id="numCattle"
+                value={numCattle}
+                onChange={(e) => setNumCattle(parseInt(e.target.value))}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                required
+              />
+            </label>
           </div>
           <div className="button-container">
-          
             <button
               type="submit"
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors"
             >
-            
               Calcular
             </button>
-            
           </div>
         </form>
         {results && (
           <div>
-          
             <ResultsTable />
             <div className="button-container">
-            
               <button
                 onClick={saveToHistory}
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors"
               >
-              
                 Salvar no Histórico
               </button>
               <button
@@ -179,7 +169,6 @@ function Calculator() {
                 }}
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors"
               >
-              
                 Refazer Cálculo
               </button>
             </div>

@@ -46,10 +46,12 @@ body {
   
   .text-gray-700 {
     color: #4a5568;
+    text-align: center;
   }
   
   .text-gray-800 {
     color: #2d3748;
+    text-align: center;
   }
   
   .text-3xl {
@@ -67,11 +69,11 @@ body {
   }
   
   .bg-gray-500 {
-    background-color: #6b7280;
+    background-color: #000000;
   }
   
   .hover\:bg-gray-600:hover {
-    background-color: #4b5563;
+    background-color: #000000;
   }
   
   .text-white {
@@ -92,24 +94,13 @@ body {
     border-radius: 0.5rem;
   }
   
-/* Centralização na Main 
-.main-container { 
-  display: flex; 
-  flex-direction: 
-  column; justify-content: center; 
-  align-items: center; 
-  height: 100%; } 
   
-  .centralizado { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; } 
-    
     /* Centralizar Botões */ 
     .button-container { display: flex; 
       justify-content: center; 
-      gap: 1rem; 
+      gap: 5rem; 
       margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     .label-container { 
@@ -137,18 +128,22 @@ body {
     outline: none;
   }
   
+
+  
   /* Tabela */
   table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
+    border: 1px solid #e2e8f0; /* Adiciona borda externa à tabela */
   }
   
   thead th {
     background-color: #38a169;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 0.75rem;
+    border: 1px solid #e2e8f0; /* Borda em cada cabeçalho */
   }
   
   tbody tr {
@@ -162,7 +157,8 @@ body {
   
   td {
     padding: 0.75rem;
-    text-align: left;
+    text-align: center;
+    border: 1px solid #e2e8f0; /* Borda em cada célula */
   }
   
   .font-medium {
@@ -171,34 +167,6 @@ body {
   
   .divide-y > * + * {
     border-top: 1px solid #e2e8f0;
-  }
-  
-  /* Carrossel */
-  .swiper {
-    padding: 1rem 0;
-  }
-  
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-  }
-  
-  .swiper-slide h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #2f855a;
-  }
-  
-  .swiper-slide p {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2d3748;
   }
   
   /* Layout Responsivo */
