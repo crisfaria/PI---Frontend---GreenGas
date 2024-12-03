@@ -5,7 +5,7 @@ import TelaUsuario from "./pages/TelaUsuario";
 import BuscarTodas from "./services/ContatoService";
 import Atualizar from "./services/ContatoService";
 import Remover from "./services/ContatoService";
-import Erro404 from "./Pages/Erro404";
+import Erro404 from "./pages/Error404";
 
 
 function App() {

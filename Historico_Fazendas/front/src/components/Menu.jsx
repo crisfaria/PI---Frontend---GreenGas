@@ -7,10 +7,10 @@ function Menu() {
      <nav>
        <ul className="menu-list">
         <li>
-          <NavLink to="/">Listar Fazendas</NavLink>
+          <NavLink to="/">Hitórico de Fazendas</NavLink>
         </li>
         <li>
-          <NavLink to="/fazendas">Historico Fazendas</NavLink>
+          <NavLink to="/relatorio">Relatório de cálculos</NavLink>
         </li>
         <li>
            <NavLink to="/">Sair</NavLink>

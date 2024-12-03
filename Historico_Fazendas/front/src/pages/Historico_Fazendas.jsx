@@ -5,7 +5,7 @@ import { atualizar } from "../services/ContatoService";
 import { remover } from "../services/ContatoService";
 import Listagem from "./Listagem";
 
-function ListarFazendas() {
+function HistoricoFazendas() {
     const [fazenda, setFazendas] = useState([]);
     const [erro, setErro] = useState("");
     const navigate = useNavigate();
@@ -46,4 +46,4 @@ function ListarFazendas() {
     );
 }
 
-export default ListarFazendas;
+export default HistoricoFazendas;

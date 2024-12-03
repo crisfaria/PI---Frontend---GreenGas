@@ -34,5 +34,5 @@ function remover(fazenda) {
       });
   }
  
-  export { buscarTodas, atualizar, remover };
+  export default { buscarTodas, atualizar, remover };
   
