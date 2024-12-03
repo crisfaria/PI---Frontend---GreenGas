@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import "./App.css";
+import Cadastro from "./pages/Cadastro";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Cabecalho />
           <Routes>
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/cadastro" element={<Cadastro />} /> */}
+            <Route path="/cadastro" element={<Cadastro />} />
           </Routes>
           <Rodape />
         </div>

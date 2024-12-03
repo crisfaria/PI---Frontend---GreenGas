@@ -7,18 +7,34 @@ function FormLogin() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    alert(JSON.stringify(data));
+    await fetch("meubackend/caminho-do-endpoint", {
+      body: JSON.stringify(data),
+    });
+  };
 
   return (
     <div className="conteudoLogin">
       <div className="formContainer">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1>Green Gas</h1>
-          <input type="text" {...register("email", { required: true })} />
+
+          <label className="label">Email:</label>
+          <input
+            type="text"
+            placeholder="fulano@email.com"
+            {...register("email", { required: true })}
+          />
           {errors.email && (
             <span className="erroValidacao">Por favor insira seu email.</span>
           )}
-          <input type="password" {...register("senha", { required: true })} />
+          <label className="label">Senha:</label>
+          <input
+            type="password"
+            placeholder="Gg123@45"
+            {...register("senha", { required: true })}
+          />
           {errors.senha && (
             <span className="erroValidacao">Por favor insira sua senha.</span>
           )}
@@ -29,7 +45,7 @@ function FormLogin() {
 
           <p
             className="esqueceuSenha"
-            onClick={() => alert("Puxa Prof, que pena! :(")}
+            onClick={() => alert("Vixi Prof, e agora?! :o")}
           >
             Esqueceu a senha?
           </p>
