@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.css"; // Importando o CSS para o header
 
 function Footer() {
   return (
@@ -12,9 +12,7 @@ function Footer() {
             </p>
             <p className="rights">Todos os direitos reservados.</p>
           </div>
-          
-          <div className="divider"></div>
-          
+
           <div className="developer">
             <span>Desenvolvido por </span>
             <div className="developer-info">
@@ -23,15 +21,18 @@ function Footer() {
                 alt="Logo da Empresa"
                 className="icon"
               />
-              <span>CRIS</span>
+              <span>C.R.I.S</span>
             </div>
-          </div>
-          
+           
+            </div>
+        
           <a href="mailto:crisdevops@exemplo.com" className="contact">
             <span>crisdevops@exemplo.com</span>
           </a>
         </div>
-      </div>
+        </div>
+     
+      
     </footer>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Menu from "../components/Menu";
+import Relatorio from "../components/Relatorio";
 
 
 function TelaUsuario() {
@@ -9,7 +9,7 @@ function TelaUsuario() {
     <div>
       <Header />
       <main>
-        <Menu />
+        <Relatorio />
       </main>
       <Footer/>
     </div>
