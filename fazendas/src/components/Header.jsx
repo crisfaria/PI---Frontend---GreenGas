@@ -12,6 +12,7 @@ function Header() {
       <nav className="header-nav">
         <NavLink to="/" className="nav-link">Perfil</NavLink>
         <NavLink to="/fazendas" className="nav-link">Fazendas</NavLink>
+        <NavLink to="calculadora" className="nav-link">Calculadora</NavLink>
         <NavLink to="/historico" className="nav-link">Histórico</NavLink>
       </nav>
     </header>

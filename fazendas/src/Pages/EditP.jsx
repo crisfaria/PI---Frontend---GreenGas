@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importa o hook de navegação
 import Header from '../components/Header';
 import Footer from '../components/Footer';

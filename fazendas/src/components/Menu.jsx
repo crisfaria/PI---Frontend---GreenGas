@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.css"; // Importando o arquivo CSS para estilizar o Menu
+import Avatar from "../image/Avatar.jpg"; // Caminho correto para a imagem
 
 function Menu() {
   return (
@@ -8,6 +9,11 @@ function Menu() {
       {/* Mensagem de boas-vindas fora da caixa */}
       <p className="menu-welcome-message">Bem-vindo(a), Usuário</p>
 
+      {/* Ícone de usuário */}
+      <div className="menu-user-icon">
+        <img src={Avatar} alt="Ícone do Usuário" className="menu-avatar" />
+      </div>
+      
       {/* Caixa do menu */}
       <section className="menu-box">
         {/* Nome do usuário centralizado */}

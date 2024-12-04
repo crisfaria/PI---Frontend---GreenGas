@@ -12,6 +12,13 @@
       "localizacao": "Vicente Pires",
       "tamanho": 90000,
       "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "d94a",
+      "nome": "Karlos",
+      "localizacao": "Sudoeste",
+      "tamanho": 10000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }
