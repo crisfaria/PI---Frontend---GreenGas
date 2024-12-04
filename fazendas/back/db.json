@@ -19,6 +19,13 @@
       "localizacao": "Sudoeste",
       "tamanho": 10000,
       "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "57f7",
+      "nome": "Cris",
+      "localizacao": "Asa Sul",
+      "tamanho": 2999,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }
