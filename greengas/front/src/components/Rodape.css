@@ -1,6 +1,70 @@
-footer {
-  height: 60px;
-  text-align: center;
-  color: #909090;
+/* Estilos gerais para o footer */
+.footer {
+  background-color: #2e8b57; /* Cor de fundo escura */
+  color: white; /* Texto branco */
+  padding: 20px 0; /* Espaçamento superior e inferior */
+  font-family: "Arial", sans-serif; /* Fonte padrão */
+  font-size: 14px; /* Tamanho de fonte padrão */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limita a largura */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 20px; /* Adiciona espaçamento nas laterais */
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alinha tudo ao centro */
+  gap: 75px; /* Espaço entre os elementos */
+  justify-content: space-evenly;
+}
+
+.branding {
+  font-size: 14px; /* Tamanho da fonte para as informações de branding */
+}
+
+.copyright {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rights {
   font-size: 12px;
+  opacity: 0.8; /* Um pouco de transparência */
+}
+
+.developer {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.developer-info {
+  display: flex;
+  align-items: center;
+}
+
+.developer-info span {
+  margin-left: 8px; /* Espaço entre o logo e o nome da empresa */
+}
+
+.icon {
+  width: 40px; /* Tamanho pequeno do logo */
+  height: auto; /* Mantém a proporção do logo */
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.contact:hover {
+  color: #000000; /* Cor de destaque ao passar o mouse */
 }

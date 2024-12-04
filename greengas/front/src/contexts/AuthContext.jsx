@@ -1,66 +1,63 @@
-import { createContext, useState } from "react";
-import { autenticar, cadastrar, atualizar } from "../services/AuthService";
+import { createContext, useState, useContext } from "react";
+import axios from "axios";
 
 const AuthContext = createContext();
 
-function AuthProvider(props) {
-  const [usuario, setUsuario] = useState({
-    id: null,
-    email: null,
-    logado: false,
-    token: null,
-  });
+export const AuthProvider = ({ children }) => {
+  const [usuario, setUsuario] = useState(null);
+  const [token, setToken] = useState(null);
+  const [error, setError] = useState(null);
 
-  const login = async (usuario) => {
-    const resposta = await autenticar(usuario);
-    if (resposta.sucesso) {
-      setUsuario({
-        id: resposta.dados.user.id,
-        email: resposta.dados.user.email,
-        logado: true,
-        token: resposta.dados.accessToken,
+  const url = "http://localhost:3000";
+
+  const login = async (email, senha) => {
+    try {
+      const response = await axios.post(`${url}/login`, {
+        email,
+        password: senha,
       });
-      return "";
-    } else {
-      return resposta.mensagem;
+
+      const { accessToken, usuario } = response.data;
+
+      setToken(accessToken);
+      setUsuario(usuario);
+      setError(null);
+      return true;
+    } catch (err) {
+      console.error(err);
+      setError("Email ou senha incorretos.");
+      return false;
     }
   };
 
-  const logout = async () => {
-    setUsuario({ id: null, email: null, logado: false, token: null });
-  };
+  const cadastro = async (data) => {
+    const { nome, email, senha, dataNascimento } = data;
 
-  const cadastro = async (usuario) => {
-    const resposta = await cadastrar(usuario);
-    if (resposta.sucesso) {
-      setUsuario({
-        id: resposta.dados.user.id,
-        email: resposta.dados.user.email,
-        logado: true,
-        token: resposta.dados.accessToken,
+    try {
+      const response = await axios.post(`${url}/users`, {
+        nome,
+        email,
+        password: senha,
+        dataNascimento,
       });
-      return null;
-    } else {
-      return resposta.mensagem;
+      if (response.status === 201) {
+        setError(null);
+        return true;
+      }
+    } catch (err) {
+      console.log(err);
+      setError(
+        "Um erro ocorreu em nosso servidor. Tente novamente mais tarde."
+      );
+      return false;
     }
   };
-
-  const editar = async (usuario) => {
-    const resposta = await atualizar(usuario);
-    if (resposta.sucesso) {
-      return null;
-    } else {
-      return resposta.mensagem;
-    }
-  };
-
-  const contexto = { usuario, login, logout, cadastro, editar };
 
   return (
-    <AuthContext.Provider value={contexto}>
-      {props.children}
+    <AuthContext.Provider value={{ usuario, token, error, login, cadastro }}>
+      {children}
     </AuthContext.Provider>
   );
-}
+};
 
-export { AuthContext, AuthProvider };
+export const useAuth = () => useContext(AuthContext);

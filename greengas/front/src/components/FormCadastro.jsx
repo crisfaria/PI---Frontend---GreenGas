@@ -1,17 +1,30 @@
 import "./FormCadastro.css";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function FormCadastro() {
+  const [isLoading, setIsLoading] = useState(false);
+  const { cadastro, error } = useAuth();
   const {
     register,
     handleSubmit,
-    formState: { errors },
     watch,
+    formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate();
+
   const onSubmit = async (data) => {
-    // alert(JSON.stringify(data));
-    await fetch("localhost:3000/users", { body: JSON.stringify(data) });
+    setIsLoading(true);
+    const success = await cadastro(data);
+    if (success) {
+      alert("Cadastro realizado com sucesso!");
+      navigate("/perfil");
+    } else {
+      setIsLoading(false);
+    }
   };
 
   const senhaInformada = watch("senha");
@@ -35,20 +48,28 @@ function FormCadastro() {
           )}
           <label className="label">Email:</label>
           <input
-            type="text"
+            type="email"
             placeholder="fulano@email.com"
-            {...register("email", { required: true })}
+            {...register("email", {
+              required: true,
+              pattern: /^\S+@\S+$/,
+            })}
           />
-          {errors.email && (
+          {errors.email && errors.email.type === "required" && (
             <span className="erroValidacao">Por favor insira seu email.</span>
+          )}
+          {errors.email && errors.email.type === "pattern" && (
+            <span className="erroValidacao">
+              Por favor insira um email válido.
+            </span>
           )}
           <label className="label">Data de Nascimento:</label>
           <input
-            type="text"
+            type="date"
             placeholder="31/02/1900"
-            {...register("dataDeNascimento", { required: true })}
+            {...register("dataNascimento", { required: true })}
           />
-          {errors.dataDeNascimento && (
+          {errors.dataNascimento && (
             <span className="erroValidacao">
               Por favor insira sua data de nascimento.
             </span>
@@ -91,7 +112,12 @@ function FormCadastro() {
             </span>
           )}
 
-          <input type="submit" value={"Cadastre-se"} />
+          <input
+            type="submit"
+            value={isLoading ? "Carregando..." : "Cadastre-se"}
+            disabled={isLoading}
+          />
+          {error && <p>{error}</p>}
 
           <hr />
 
@@ -107,7 +133,9 @@ function FormCadastro() {
         </form>
       </div>
       <div className="linkContainerCadastro">
-        <p className="cadastro">Já tem conta? Conecte-se!</p>
+        <Link to="/login">
+          <p className="cadastro">Já tem conta? Conecte-se!</p>
+        </Link>
       </div>
     </div>
   );

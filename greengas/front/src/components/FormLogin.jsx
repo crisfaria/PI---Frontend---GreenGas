@@ -1,17 +1,29 @@
 import "./FormLogin.css";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function FormLogin() {
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const { login, error } = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = async (data) => {
-    alert(JSON.stringify(data));
-    await fetch("meubackend/caminho-do-endpoint", {
-      body: JSON.stringify(data),
-    });
+    setIsLoading(true);
+    const success = await login(data.email, data.senha);
+    if (success) {
+      alert("Login realizado com sucesso!");
+      navigate("/perfil");
+    } else {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -29,6 +41,7 @@ function FormLogin() {
           {errors.email && (
             <span className="erroValidacao">Por favor insira seu email.</span>
           )}
+
           <label className="label">Senha:</label>
           <input
             type="password"
@@ -39,7 +52,12 @@ function FormLogin() {
             <span className="erroValidacao">Por favor insira sua senha.</span>
           )}
 
-          <input type="submit" value={"Entrar"} />
+          <input
+            type="submit"
+            value={isLoading ? "Carregando..." : "Entrar"}
+            disabled={isLoading}
+          />
+          {error && <p>{error}</p>}
 
           <hr />
 
@@ -52,7 +70,9 @@ function FormLogin() {
         </form>
       </div>
       <div className="linkContainer">
-        <p className="cadastro">Não tem conta? Cadastre-se!</p>
+        <Link to="/cadastro">
+          <p className="cadastro">Não tem conta? Cadastre-se!</p>
+        </Link>
       </div>
     </div>
   );
