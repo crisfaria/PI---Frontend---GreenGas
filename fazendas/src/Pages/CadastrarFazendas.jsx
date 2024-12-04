@@ -1,26 +1,24 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
-import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./CadastrarFazendas.css"; 
+import "./CadastrarFazendas.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function CadastrarFazendas() {
   const [nome, setNome] = useState("");
   const [localizacao, setLocalizacao] = useState("");
   const [tamanho, setTamanho] = useState("");
-  const [imagem, setImagem] = useState(null); // Estado para armazenar o arquivo da imagem (simulado)
-  const [sucesso, setSucesso] = useState(false); // Estado para controlar a exibição da mensagem de sucesso
-  const navigate = useNavigate(); // Hook para redirecionar para outra página
+  const [imagem, setImagem] = useState(null); // Simulando o upload
+  const [sucesso, setSucesso] = useState(false);
+  const navigate = useNavigate();
 
-  // Função fake para substituir o upload real da imagem
   const handleImagemChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // A imagem não será realmente carregada, estou simulando com uma URL fictícia
-      setImagem("../src/image/istockphoto-863542630-612x612.jpg"); // Simulação de imagem
+      setImagem("../src/image/istockphoto-863542630-612x612.jpg");
     }
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,17 +27,15 @@ function CadastrarFazendas() {
       nome,
       localizacao,
       tamanho: parseInt(tamanho),
-      imagem: imagem || "../src/image/istockphoto-863542630-612x612.jpg", // URL fictícia como imagem
+      imagem: imagem || "../src/image/istockphoto-863542630-612x612.jpg",
     };
 
     try {
-      // Enviar a nova fazenda para o backend (sem upload real de imagem)
       await axios.post("http://localhost:5000/fazendas", novaFazenda);
-
-      setSucesso(true); // Marca o sucesso do envio
+      setSucesso(true);
       setTimeout(() => {
-        setSucesso(false); // Oculta a mensagem de sucesso após 2 segundos
-        navigate("/fazendas"); // Redireciona para a página de fazendas cadastradas
+        setSucesso(false);
+        navigate("/fazendas");
       }, 2000);
     } catch (error) {
       console.error("Erro ao cadastrar a fazenda:", error);
@@ -48,59 +44,53 @@ function CadastrarFazendas() {
   };
 
   return (
-    <div className="cadastro-fazenda-container">
-      <Header />
+    <>
+    <Header />
+    <main className="cadastro-fazenda-container">
       <h2>Criar Fazenda</h2>
-
-      {/* Exibe a mensagem de sucesso após a criação */}
-      {sucesso && (
-        <div className="success-message">
-          Fazenda cadastrada com sucesso!
-        </div>
-      )}
-
-      <div className="cadastro-fazenda-form-container">
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Nome da Fazenda</label>
-            <input
-              type="text"
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Localização</label>
-            <input
-              type="text"
-              value={localizacao}
-              onChange={(e) => setLocalizacao(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Tamanho em Hectares</label>
-            <input
-              type="number"
-              value={tamanho}
-              onChange={(e) => setTamanho(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Imagem da Fazenda (Opcional)</label>
-            <input
-              type="file" // Altera o tipo para "file" para permitir o upload de arquivos
-              accept="image/*" // Restringe a seleção a arquivos de imagem
-              onChange={handleImagemChange}
-            />
-            {imagem && <p>Imagem selecionada: {"../src/image/istockphoto-863542630-612x612.jpg"}</p>}
-          </div>
-          <button type="submit">Criar Fazenda</button>
-        </form>
-      </div>
-    </div>
+      {sucesso && <p className="success-message">Fazenda cadastrada com sucesso!</p>}
+      <form onSubmit={handleSubmit} className="cadastro-fazenda-form">
+        <label>
+          Nome da Fazenda
+          <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Localização
+          <input
+            type="text"
+            value={localizacao}
+            onChange={(e) => setLocalizacao(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Tamanho em Hectares
+          <input
+            type="number"
+            value={tamanho}
+            onChange={(e) => setTamanho(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Imagem da Fazenda (Opcional)
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImagemChange}
+          />
+        </label>
+        {imagem && <p>Imagem selecionada: {imagem}</p>}
+        <button type="submit">Criar Fazenda</button>
+      </form>
+    </main>
+    <Footer />
+    </>
   );
 }
 

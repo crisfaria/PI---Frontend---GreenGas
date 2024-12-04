@@ -1,47 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios"; // Importando o axios
-import Header from "../components/Header"; // Importando o Header
-import "./PerfilFazenda.css"; // Importando o CSS para a página
+import axios from "axios";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "./PerfilFazenda.css";
 
 function PerfilFazenda() {
-  const [fazenda, setFazenda] = useState(null); // Estado para armazenar a fazenda
-  const { id } = useParams(); // Pegando o id da fazenda da URL
+  const [fazenda, setFazenda] = useState(null);
+  const { id } = useParams();
 
-  // Função para carregar os dados da fazenda
   useEffect(() => {
     const fetchFazenda = async () => {
       try {
-        // Fazendo a requisição GET para buscar os dados da fazenda pelo id
         const response = await axios.get(`http://localhost:5000/fazendas/${id}`);
-        setFazenda(response.data); // Atualiza o estado com os dados da fazenda
+        setFazenda(response.data);
       } catch (error) {
         console.error("Erro ao carregar os dados da fazenda:", error);
       }
     };
 
-    fetchFazenda(); // Chama a função ao montar o componente
-  }, [id]); // Quando o id da fazenda mudar, a requisição será refeita
+    fetchFazenda();
+  }, [id]);
 
   if (!fazenda) {
-    return <div>Carregando dados da fazenda...</div>; // Exibe "Carregando..." enquanto os dados não são carregados
+    return <p>Carregando dados da fazenda...</p>;
   }
 
   return (
-    <div className="perfil-fazenda-container">
+    <>
       <Header />
-      <div className="perfil-fazenda-box">
-        <div className="perfil-fazenda-image">
-          <img src={fazenda.imagem || "../src/image/istockphoto-863542630-612x612.jpg"} alt={fazenda.nome} />
+      <main className="perfil-fazenda">
+        <div className="perfil-fazenda-imagem-container">
+          <img 
+            src={fazenda.imagem || "../src/image/istockphoto-863542630-612x612.jpg"} 
+            alt={fazenda.nome} 
+            className="perfil-fazenda-imagem"
+          />
         </div>
-        <h2>{fazenda.nome}</h2>
-        <p><strong>Localização:</strong> {fazenda.localizacao}</p>
-        <p><strong>Tamanho:</strong> {fazenda.tamanho} hectares</p>
-        <div className="perfil-fazenda-button">
+        <section className="perfil-fazenda-detalhes">
+          <h2>{fazenda.nome}</h2>
+          <p><strong>Localização:</strong> {fazenda.localizacao}</p>
+          <p><strong>Tamanho:</strong> {fazenda.tamanho} hectares</p>
           <button>Consultar Último Cálculo</button>
-        </div>
-      </div>
-    </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 

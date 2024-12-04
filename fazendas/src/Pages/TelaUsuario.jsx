@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
+import Footer from "../components/Footer";
 
 function TelaUsuario() {
   return (
@@ -9,6 +10,7 @@ function TelaUsuario() {
       <main>
         <Menu />
       </main>
+      <Footer />
     </>
   );
 }

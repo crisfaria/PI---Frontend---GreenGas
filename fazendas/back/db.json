@@ -5,34 +5,6 @@
       "nome": "Fazenda Boa Vista",
       "localizacao": "São Paulo",
       "tamanho": 350
-    },
-    {
-      "id": "9d9e",
-      "nome": "eyeryr",
-      "localizacao": "yrery",
-      "tamanho": 5,
-      "imagem": ".../src/image/istockphoto-863542630-612x612.jpg"
-    },
-    {
-      "id": "9f31",
-      "nome": "bbb",
-      "localizacao": "bbb",
-      "tamanho": 525,
-      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
-    },
-    {
-      "id": "cb3b",
-      "nome": "kkik",
-      "localizacao": "hhh",
-      "tamanho": 5252,
-      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
-    },
-    {
-      "id": "c1b1",
-      "nome": "hgmh",
-      "localizacao": "mhjm",
-      "tamanho": 444,
-      "imagem": ".../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }

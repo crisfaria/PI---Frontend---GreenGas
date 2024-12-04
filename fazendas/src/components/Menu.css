@@ -1,74 +1,83 @@
-/* Contêiner que centraliza o menu na tela abaixo do header */
+/* Contêiner principal da página */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que ocupa toda a altura da janela */
+}
+
+/* Header fixado no topo */
+header {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+}
+
+/* Contêiner que centraliza o menu e mensagem de boas-vindas */
 .menu-container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: calc(100vh - 60px); /* Altura restante após o header */
-    position: absolute; /* Usado para centralizar dentro da tela */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center; /* Centraliza o texto dentro da caixa */
-    flex-direction: column; /* Organiza os itens verticalmente */
-  }
-  
-  /* Texto de boas-vindas fora da caixa */
-  .menu-welcome-message {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 8%; /* Espaço entre a mensagem e a caixa */
-  }
-  
-  /* Caixa do menu com tamanho menor */
-  .menu-box {
-    background-color: #f8f9fa;
-    width: 250px; /* Largura do menu */
-    padding: 15px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(14, 87, 54, 0.492);
-    max-height: 500px; /* Limita a altura do menu */
-    overflow-y: auto; /* Caso o conteúdo ultrapasse a altura, permite rolar */
-  }
-  
-  /* Nome do usuário, centralizado na parte superior da caixa */
-  .menu-user-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1.5rem; /* Espaço entre o nome e a lista de links */
-  }
-  
-  /* Lista de links (rotas) */
-  .menu-list {
-    text-align: left;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Estilo dos itens da lista */
-  .menu-list li {
-    margin-bottom: 0%; /* Espaço entre os itens */
-  }
-  
-  /* Estilo dos links */
-  .menu-list li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Estilo do link ao passar o mouse */
-  .menu-list li a:hover {
-    background-color: #2e8b57;
-    color: white;
-  }
-  
+  flex: 1; /* Preenche o espaço entre o header e o footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente o conteúdo do menu */
+  text-align: center;
+}
+
+/* Texto de boas-vindas */
+.menu-welcome-message {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px; /* Espaço entre a mensagem e a caixa */
+}
+
+/* Caixa principal do menu */
+.menu-box {
+  background-color: #f8f9fa;
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(14, 87, 54, 0.492);
+  max-height: 500px;
+  overflow-y: auto; /* Habilita rolagem se necessário */
+}
+
+/* Nome do usuário no topo da caixa */
+.menu-user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem; /* Espaço entre o nome e a lista de links */
+  text-align: center;
+}
+
+/* Lista de links (rotas) */
+.menu-list {
+  list-style-type: none; /* Remove marcadores padrão */
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Estilo dos itens da lista */
+.menu-list li {
+  margin-bottom: 8px; /* Espaço entre os itens */
+}
+
+/* Estilo dos links */
+.menu-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo do link ao passar o mouse */
+.menu-list li a:hover {
+  background-color: #2e8b57;
+  color: white;
+}

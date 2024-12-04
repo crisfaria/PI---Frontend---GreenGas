@@ -24,15 +24,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   background-color: #2e8b57; /* Cor de fundo */
   color: #ffffff; /* Texto branco */
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

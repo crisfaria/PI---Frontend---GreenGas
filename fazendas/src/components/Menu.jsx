@@ -4,21 +4,19 @@ import "./Menu.css"; // Importando o arquivo CSS para estilizar o Menu
 
 function Menu() {
   return (
-    <div className="menu-container">
+    <nav className="menu-container">
       {/* Mensagem de boas-vindas fora da caixa */}
-      <div className="menu-welcome-message">
-        Bem-vindo(a), Usuário
-      </div>
+      <p className="menu-welcome-message">Bem-vindo(a), Usuário</p>
 
       {/* Caixa do menu */}
-      <div className="menu-box">
+      <section className="menu-box">
         {/* Nome do usuário centralizado */}
-        <div className="menu-user-name">Fulano Sobrenome</div>
+        <h2 className="menu-user-name">Fulano Sobrenome</h2>
         
         {/* Lista de rotas */}
         <ul className="menu-list">
           <li>
-            <NavLink to="/fazendas">Fazendas Cadastradas</NavLink>
+            <NavLink to="/EditP">Editar Perfil</NavLink>
           </li>
           <li>
             <NavLink to="/cadastro">Cadastrar Fazendas</NavLink>
@@ -30,8 +28,8 @@ function Menu() {
             <NavLink to="/">Sair</NavLink>
           </li>
         </ul>
-      </div>
-    </div>
+      </section>
+    </nav>
   );
 }
 

@@ -1,110 +1,54 @@
-/* Container principal para a página de cadastro */
+/* Estilo geral */
 .cadastro-fazenda-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding-top: 60px; /* Para ajustar o conteúdo abaixo do header fixo */
-  height: calc(100vh - 60px); /* Subtrai a altura do header fixo */
-}
-
-/* Estilo do título */
-.cadastro-fazenda-container h2 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
-  font-weight: bold;
-}
-
-/* Container do formulário */
-.cadastro-fazenda-form-container {
-  background-color: #ffffff;
-  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Estilo do formulário */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Espaçamento entre os campos */
-}
-
-/* Estilo dos campos do formulário */
-form div {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Estilo do rótulo (label) */
-form label {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-/* Estilo dos campos de entrada (inputs) */
-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
   color: #333;
 }
 
-form input:focus {
-  border-color: #2e8b57; /* Cor de foco verde */
-  outline: none;
+.cadastro-fazenda-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
 }
 
-/* Estilo do botão de envio */
+.cadastro-fazenda-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 button {
-  padding: 12px 20px;
-  background-color: #2e8b57; /* Cor do botão */
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #3cb371; /* Cor mais clara quando passar o mouse */
+  background-color: #45a049;
 }
 
-/* Responsividade: Ajustes para telas menores */
-@media (max-width: 768px) {
-  .cadastro-fazenda-form-container {
-    padding: 20px;
-    width: 95%; /* Ajuste da largura para telas menores */
-  }
-
-  .cadastro-fazenda-container h2 {
-    font-size: 24px;
-  }
-
-  form label {
-    font-size: 14px;
-  }
-
-  form input {
-    font-size: 14px;
-  }
-
-  button {
-    font-size: 14px;
-  }
-  .success-message {
-    background-color: #4caf50; /* Cor verde */
-    color: white;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-  }  
+.success-message {
+  margin-bottom: 20px;
+  color: #4caf50;
+  font-weight: bold;
 }
