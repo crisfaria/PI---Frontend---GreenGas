@@ -1,7 +1,7 @@
 /* Estilos do Footer */
 .footer {
     background-color: #2e8b57;
-    padding: 20px 0;
+    padding: 10px ;
     color: white;
     font-size: 14px;
     position: relative;
@@ -11,13 +11,10 @@
   /* Container para o conteúdo do footer */
   .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;  /* Espaça os itens (esquerda, centro, direita) */
     align-items: center;
-    padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
   
   /* Copyright alinhado à esquerda */
@@ -33,6 +30,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-logo .icon {

@@ -5,6 +5,13 @@
       "nome": "Fazenda Boa Vista",
       "localizacao": "São Paulo",
       "tamanho": 350
+    },
+    {
+      "id": "8230",
+      "nome": "Canto da Sereia",
+      "localizacao": "Vicente Pires",
+      "tamanho": 90000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }
