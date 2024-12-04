@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<TelaUsuario />} />
-        <Route path="/fazendas" element={<Relatorio />} />
+        <Route path="/historico" element={<Relatorio />} />
         <Route path="*" element={<Erro404 />} />
       </Routes>
     </BrowserRouter>

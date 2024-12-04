@@ -14,7 +14,7 @@ function Header() {
         <NavLink to="/" className="nav-link">Perfil</NavLink>
         <NavLink to="/fazendas" className="nav-link">Fazendas</NavLink>
         <NavLink to="/historico" className="nav-link">Historico</NavLink>
-        <NavLink to="/sair" className="logout">Logout</NavLink>
+       
       </nav>
     </header>
   );

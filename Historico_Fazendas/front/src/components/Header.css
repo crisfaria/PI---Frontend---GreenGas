@@ -40,15 +40,6 @@
   transition: color 0.3s ease; /* Transição suave na interação */
 }
 
-.logout{
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-  color: #ffffff; /* Cor do link */
-  text-decoration: none; /* Remove sublinhado */
-  padding-right: 20px;
-  transition: color 10.9s ease;
-}
-
 .nav-link:hover {
   color: #dcdcdc; /* Cor mais clara ao passar o mouse */
 }

@@ -2,7 +2,7 @@
 .footer {
   background-color: #2e8b57; /* Cor de fundo escura */
   color: white; /* Texto branco */
-  padding: 20px 0; /* Espaçamento superior e inferior */
+  padding: 20px 1; /* Espaçamento superior e inferior */
   font-family: 'Arial', sans-serif; /* Fonte padrão */
   font-size: 14px; /* Tamanho de fonte padrão */
   text-align: center; /* Centraliza o conteúdo */
