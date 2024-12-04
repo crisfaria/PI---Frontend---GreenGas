@@ -1,13 +1,14 @@
 import { useState } from "react";
-import axios from "axios";
 import "./Calculator.css";
+import { useHistorico } from "../components/HistoricoCotext";
 
 function Calculator() {
+  const { adicionarAoHistorico } = useHistorico();
   const [numCattle, setNumCattle] = useState(0);
   const [results, setResults] = useState(null);
-  const [history, setHistory] = useState([]);
+  const [successMessage, setSuccessMessage] = useState(""); // Para exibir a mensagem de sucesso
 
-  const calculate = async (e) => {
+  const calculate = (e) => {
     e.preventDefault();
     if (numCattle > 0) {
       const residuo = numCattle * 10;
@@ -45,26 +46,18 @@ function Calculator() {
     }
   };
 
-  const saveToHistory = async () => {
+  const saveToHistory = () => {
     if (results) {
       const entry = {
         date: new Date().toLocaleString(),
         numCattle,
         results,
       };
-      setHistory([...history, entry]);
-
-      try {
-        await axios.post("http://localhost:5174/Resultados", {
-          numCattle,
-          results,
-          date: new Date().toISOString(),
-          userId: 1,
-          farmId: 1,
-        });
-      } catch (error) {
-        console.error("Error saving calculation:", error);
-      }
+      adicionarAoHistorico(entry); // Salva no estado global
+      setSuccessMessage(
+        "Cálculo salvo com sucesso! Você pode visualizar os resultados no histórico."
+      );
+      setTimeout(() => setSuccessMessage(""), 5000); // Limpa a mensagem após 5 segundos
     }
   };
 
@@ -90,36 +83,6 @@ function Calculator() {
     </div>
   );
 
-  const HistoryTable = () => (
-    <div className="overflow-x-auto mt-6">
-      <h2 className="text-lg font-bold text-gray-700 mb-4">Histórico</h2>
-      <table className="w-full bg-white rounded-lg shadow-md">
-        <thead className="bg-gray-700 text-white">
-          <tr>
-            <th className="px-4 py-3 text-left">Data</th>
-            <th className="px-4 py-3 text-left">Quantidade de Gado</th>
-            <th className="px-4 py-3 text-left">Resultados</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-200">
-          {history.map((entry, index) => (
-            <tr key={index} className="hover:bg-gray-50">
-              <td className="px-4 py-3 font-medium text-gray-700">
-                {entry.date}
-              </td>
-              <td className="px-4 py-3 text-gray-700">{entry.numCattle}</td>
-              <td className="px-4 py-3">
-                {Object.entries(entry.results)
-                  .map(([key, value]) => `${key}: ${value.toFixed(2)} m³`)
-                  .join(", ")}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-
   return (
     <div className="max-w-4xl mx-auto main-container">
       <div className="bg-white rounded-lg shadow-xl p-6 mb-8 centralizado">
@@ -137,7 +100,7 @@ function Calculator() {
                 type="number"
                 id="numCattle"
                 value={numCattle}
-                onChange={(e) => setNumCattle(parseInt(e.target.value))}
+                onChange={(e) => setNumCattle(parseInt(e.target.value) || 0)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 required
               />
@@ -160,7 +123,7 @@ function Calculator() {
                 onClick={saveToHistory}
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors"
               >
-                Salvar no Histórico
+                Salvar
               </button>
               <button
                 onClick={() => {
@@ -174,7 +137,11 @@ function Calculator() {
             </div>
           </div>
         )}
-        {history.length > 0 && <HistoryTable />}
+        {successMessage && (
+          <div className="mt-4 p-4 bg-green-600 border-4 border-green-800 text-white rounded-lg text-center font-bold text-lg animate-bounce">
+            ✅ {successMessage}
+          </div>
+        )}
       </div>
     </div>
   );
