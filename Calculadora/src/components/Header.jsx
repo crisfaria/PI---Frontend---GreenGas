@@ -11,8 +11,9 @@ function Header() {
         <img src="../src/image/logo.png" alt="Logo" /> {/* Logo da empresa ou sistema */}
       </div>
       <nav className="header-nav">
-        <NavLink to="/" className="nav-link">Perfil</NavLink>
+        <NavLink to="/Perfil" className="nav-link">Perfil</NavLink>
         <NavLink to="/fazendas" className="nav-link">Fazendas</NavLink>
+        <NavLink to="/" className="nav-link">Calculadora</NavLink>
         <NavLink to="/relatorio" className="nav-link">Histórico</NavLink>
         <NavLink to="/sair" className="logout">Logout</NavLink>
       </nav>
