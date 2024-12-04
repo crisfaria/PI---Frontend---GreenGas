@@ -26,6 +26,13 @@
       "localizacao": "Asa Sul",
       "tamanho": 2999,
       "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "caa1",
+      "nome": "ddd",
+      "localizacao": "ddd",
+      "tamanho": 3222,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
     }
   ]
 }

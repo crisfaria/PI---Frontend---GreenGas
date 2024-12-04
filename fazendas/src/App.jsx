@@ -10,14 +10,16 @@ import EditP from "./Pages/EditP";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<TelaUsuario />} />
-        <Route path="/fazendas" element={<FazendasCadastradas />} />
-        <Route path="/cadastro" element={<CadastroFazendas />} />
-        <Route path="/perfil-fazenda/:id" element={<PerfilFazenda />} />
-        <Route path="/editp" element={<EditP />} />
-        <Route path="*" element={<Erro404 />} />
-      </Routes>
+      <div className="layoutPagina">
+        <Routes>
+          <Route path="/" element={<TelaUsuario />} />
+          <Route path="/fazendas" element={<FazendasCadastradas />} />
+          <Route path="/cadastro" element={<CadastroFazendas />} />
+          <Route path="/perfil-fazenda/:id" element={<PerfilFazenda />} />
+          <Route path="/editp" element={<EditP />} />
+          <Route path="*" element={<Erro404 />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

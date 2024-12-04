@@ -8,12 +8,14 @@ body {
 
 /* Container principal */
 .fazendas-cadastradas {
-  max-width: 800px;
+  max-width: 1000px; /* Aumenta a largura máxima */
+  width: 90%; /* Ocupa 90% da largura da tela, ajustando-se a diferentes tamanhos */
   margin: 40px auto;
-  padding: 20px;
+  padding: 30px; /* Aumenta o padding interno */
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
 }
 
 /* Link de cada fazenda */
@@ -24,7 +26,7 @@ body {
 
 /* Box individual para cada fazenda */
 .fazenda-box {
-  padding: 15px;
+  padding: 20px; /* Aumenta o padding interno */
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -40,13 +42,13 @@ body {
 /* Título da fazenda */
 .fazenda-box h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px; /* Aumenta o tamanho da fonte */
   color: #333;
 }
 
 /* Informações da fazenda */
 .fazenda-box p {
-  margin: 5px 0;
+  margin: 8px 0; /* Aumenta o espaçamento vertical */
   color: #555;
 }
 
@@ -54,4 +56,20 @@ body {
 .fazenda-box:hover h3,
 .fazenda-box:hover p {
   color: white;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+  .fazendas-cadastradas {
+    max-width: 95%; /* Ajusta para quase toda a largura da tela em dispositivos pequenos */
+    padding: 20px;
+  }
+
+  .fazenda-box {
+    padding: 15px;
+  }
+
+  .fazenda-box h3 {
+    font-size: 20px; /* Reduz ligeiramente o tamanho da fonte */
+  }
 }
