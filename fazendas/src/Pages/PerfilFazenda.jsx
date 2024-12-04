@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./PerfilFazenda.css";
+import LogoCompany from "../image/LogoCompany.png"
 
 function PerfilFazenda() {
   const [fazenda, setFazenda] = useState(null);
