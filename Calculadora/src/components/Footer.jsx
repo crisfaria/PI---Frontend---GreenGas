@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import LogoCompany from "../image/LogoCompany.png"
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
         </div>
         <div className="footer-logo">
           <img
-            src="src/image/logo_for_a_company_with_the_letters_CRIS__1_-removebg-preview.png"
+            src={LogoCompany}
             alt="Logo da Empresa"
             className="icon"
           />
