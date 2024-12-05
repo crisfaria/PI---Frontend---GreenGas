@@ -1,46 +1,101 @@
-Calculadora de Biodigestor
-Este projeto é uma aplicação web desenvolvida em React para calcular as dimensões de um biodigestor com base na quantidade de gado. Ele foi criado para ajudar agricultores e profissionais do setor a dimensionar adequadamente seus biodigestores, garantindo eficiência e sustentabilidade.
+# 🚜 **Calculadora de Biodigestor**
 
+Este é um projeto **React** para calcular as dimensões de um biodigestor com base na quantidade de gado. Ele foi criado para ajudar agricultores e profissionais do setor a dimensionar adequadamente seus biodigestores, garantindo eficiência e sustentabilidade.
 
-Funcionalidades
-Cálculo de Volume: Com base na quantidade de gado inserida pelo usuário, a aplicação calcula o volume do biodigestor e outros parâmetros importantes.
+---
 
-Interface Intuitiva: Interface amigável e fácil de usar, com componentes reutilizáveis.
+## ✨ Funcionalidades
 
-Resultados Detalhados: Exibição dos resultados dos cálculos com detalhes precisos.
+<ul>
+  <li>🧮 <strong>Cálculo de Volume:</strong> Com base na quantidade de gado inserida, calcula-se o volume do biodigestor e outros parâmetros importantes.</li>
+  <li>🖥️ <strong>Interface Intuitiva:</strong> Interface amigável e fácil de usar, com componentes reutilizáveis.</li>
+  <li>📊 <strong>Resultados Detalhados:</strong> Exibição precisa dos cálculos com detalhes para melhor análise.</li>
+</ul>
 
-Tecnologias Utilizadas
-React: Biblioteca JavaScript para construção de interfaces de usuário.
+---
 
-CSS: Estilização da aplicação para um visual atraente e responsivo.
+## 🛠️ Tecnologias Utilizadas
 
-Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **CSS**: Estilização para um design moderno e responsivo.
 
-Estrutura de Arquivos
-public/: Contém arquivos estáticos, como imagens.
+---
 
-BiodigestorImg.png: Imagem ilustrativa do biodigestor.
+## 🗂️ Estrutura de Arquivos
 
-src/: Código-fonte da aplicação.
+<table>
+  <thead>
+    <tr>
+      <th><strong>Diretório/Arquivo</strong></th>
+      <th><strong>Descrição</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>public/</code></td>
+      <td>Contém arquivos estáticos, como imagens.</td>
+    </tr>
+    <tr>
+      <td><code>src/</code></td>
+      <td>Código-fonte da aplicação.</td>
+    </tr>
+    <tr>
+      <td><code>components/</code></td>
+      <td>Componentes reutilizáveis do projeto.</td>
+    </tr>
+    <tr>
+      <td><code>Header.js</code></td>
+      <td>Cabeçalho da aplicação.</td>
+    </tr>
+    <tr>
+      <td><code>Footer.js</code></td>
+      <td>Rodapé da aplicação.</td>
+    </tr>
+    <tr>
+      <td><code>Main.js</code></td>
+      <td>Lógica principal para cálculos.</td>
+    </tr>
+    <tr>
+      <td><code>Button.js</code></td>
+      <td>Botão reutilizável.</td>
+    </tr>
+    <tr>
+      <td><code>Input.js</code></td>
+      <td>Campo de entrada reutilizável.</td>
+    </tr>
+    <tr>
+      <td><code>styles/</code></td>
+      <td>Estilos globais da aplicação.</td>
+    </tr>
+    <tr>
+      <td><code>globals.css</code></td>
+      <td>Estilização global da aplicação.</td>
+    </tr>
+    <tr>
+      <td><code>App.js</code></td>
+      <td>Componente principal que orquestra os outros componentes.</td>
+    </tr>
+    <tr>
+      <td><code>index.js</code></td>
+      <td>Ponto de entrada da aplicação React.</td>
+    </tr>
+  </tbody>
+</table>
 
-components/: Componentes reutilizáveis.
+---
 
-Header.js: Cabeçalho da aplicação.
+## 📝 Licença
 
-Footer.js: Rodapé da aplicação.
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-Main.js: Componente principal que contém a lógica dos cálculos.
+---
 
-Button.js: Componente de botão reutilizável.
+## 🚀 Como Contribuir
 
-Input.js: Componente de entrada reutilizável.
+1. Faça um fork do projeto.
+2. Crie uma branch para a funcionalidade ou correção (`git checkout -b feature/minha-funcionalidade`).
+3. Envie suas alterações (`git commit -m 'Adicionei uma nova funcionalidade'`).
+4. Faça um push para a branch (`git push origin feature/minha-funcionalidade`).
+5. Abra um Pull Request.
 
-styles/: Arquivos de estilo.
-
-globals.css: Estilos globais da aplicação.
-
-App.js: Componente principal que orquestra os outros componentes.
-
-index.js: Ponto de entrada do React.
-
+---
