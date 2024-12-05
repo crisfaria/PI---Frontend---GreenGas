@@ -73,6 +73,10 @@ button {
   color: #ffffff;
 }
 
+.text-center {
+  justify-content: center;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -91,6 +95,7 @@ button {
   /* Centralizar Botões */ 
   .button-container { display: flex; 
     justify-content: center; 
+    align-items: center;
     gap: 5rem; 
     margin-top: 1rem;
     margin-bottom: 1rem;

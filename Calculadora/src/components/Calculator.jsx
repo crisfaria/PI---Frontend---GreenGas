@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Calculator.css";
-import { useHistorico } from "../components/HistoricoCotext";
+import { useHistorico } from "../components/HistoricoContext";
 
 function Calculator() {
   const { adicionarAoHistorico } = useHistorico();
@@ -121,7 +121,7 @@ function Calculator() {
             <div className="button-container">
               <button
                 onClick={saveToHistory}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors"
+                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-white-700 transition-colors text-center"
               >
                 Salvar
               </button>

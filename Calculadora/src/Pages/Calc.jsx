@@ -1,13 +1,14 @@
 import React from "react";
-import Cabecalho from "../components/Header";
+import Header from "../components/Header";
 import Calculator from "../components/Calculator";
 import Footer from "../components/Footer";
+import Relatorio from "../components/Relatorio";
 
 
-function TelaUsuario() {
+function Calc() {
   return (
     <div>
-      <Cabecalho />
+      <Header />
       <main>
         <Calculator />
       </main>
@@ -16,4 +17,4 @@ function TelaUsuario() {
   );
 }
 
-export default TelaUsuario;
+export default Calc;
