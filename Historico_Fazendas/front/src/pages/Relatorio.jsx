@@ -36,6 +36,15 @@ function Relatorio() {
         results: {
           "Volume do Biodigestor": 10.5,
           "Altura Total": 2.5,
+          "Diâmetro da Câmara": 1.8,
+          "Altura da Câmara": 1.5,
+          "Diâmetro do Gasômetro": 1.2,
+          "Altura do Gasômetro": 1.2,
+          "Comprimento do Cano Guia": 1.5,
+          "Dimensões dos Tanques": 2.0,
+          "Comprimento do Cano de Descarga": 2.0,
+          "Comprimento do Cano de Carga": 2.0,
+          "Volume de Biogás Produzido": 3.5
         },
       },
       {
@@ -44,10 +53,58 @@ function Relatorio() {
         property: "Fazenda Vale Verde",
         numCattle: 30,
         results: {
-          "Volume do Biodigestor": 7.8,
-          "Altura Total": 1.9,
+          "Volume do Biodigestor": 10.5,
+          "Altura Total": 2.5,
+          "Diâmetro da Câmara": 1.8,
+          "Altura da Câmara": 1.5,
+          "Diâmetro do Gasômetro": 1.2,
+          "Altura do Gasômetro": 1.2,
+          "Comprimento do Cano Guia": 1.5,
+          "Dimensões dos Tanques": 2.0,
+          "Comprimento do Cano de Descarga": 2.0,
+          "Comprimento do Cano de Carga": 2.0,
+          "Volume de Biogás Produzido": 3.5
         },
-      },      
+      },
+      {
+        id: 3,
+        date: new Date().toLocaleString(),
+        property: "Fazenda Sindacta",
+        numCattle: 30,
+        results: {
+          "Volume do Biodigestor": 10.5,
+          "Altura Total": 2.5,
+          "Diâmetro da Câmara": 1.8,
+          "Altura da Câmara": 1.5,
+          "Diâmetro do Gasômetro": 1.2,
+          "Altura do Gasômetro": 1.2,
+          "Comprimento do Cano Guia": 1.5,
+          "Dimensões dos Tanques": 2.0,
+         "Comprimento do Cano de Descarga": 2.0,
+         "Comprimento do Cano de Carga": 2.0,
+         "Volume de Biogás Produzido": 3.5
+      },
+    },
+    {
+      id: 3,
+      date: new Date().toLocaleString(),
+      property: "Fazenda Belinha",
+      numCattle: 30,
+      results: {
+        "Volume do Biodigestor": 10.5,
+        "Altura Total": 2.5,
+        "Diâmetro da Câmara": 1.8,
+        "Altura da Câmara": 1.5,
+        "Diâmetro do Gasômetro": 1.2,
+        "Altura do Gasômetro": 1.2,
+        "Comprimento do Cano Guia": 1.5,
+        "Dimensões dos Tanques": 2.0,
+       "Comprimento do Cano de Descarga": 2.0,
+       "Comprimento do Cano de Carga": 2.0,
+       "Volume de Biogás Produzido": 3.5
+    },
+  },
+
     ];
     setHistory(historicoSimulado);
     setFilteredHistory(historicoSimulado);
