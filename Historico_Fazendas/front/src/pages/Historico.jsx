@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import Header from "../components/Header";
-import Relatorio from "../components/Relatorio";
+import Relatorio from "../pages/Relatorio";
 import Footer from "../components/Footer";
 
-function TelaUsuario() {
+function Historico() {
   return (
     <div>
       <Header />
@@ -15,4 +15,4 @@ function TelaUsuario() {
   );
 }
 
-export default TelaUsuario;
+export default Historico;

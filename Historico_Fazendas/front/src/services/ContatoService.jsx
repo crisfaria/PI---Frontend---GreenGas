@@ -2,29 +2,26 @@ import axios from "axios";
 
 const url = import.meta.env.VITE_API_URL;
 
-// Função para buscar todas as fazendas
 export const buscarTodas = async () => {
   try {
     const response = await axios.get(`${url}/fazendas`);
     return { sucesso: true, dados: response.data };
   } catch (error) {
-    return { sucesso: false, mensagem: "Erro ao buscar fazendas." };
+    return { sucesso: false, mensagem: "Fazenda não encontrada" };
   }
 };
 
-// Função para atualizar uma fazenda
-export const atualizar = async (id, dados) => {
+export const filtrar = async (id, dados) => {
   try {
     const response = await axios.put(`${url}/fazendas/${id}`, dados, {
       headers: { "Content-Type": "application/json" },
     });
     return { sucesso: true, dados: response.data };
   } catch (error) {
-    return { sucesso: false, mensagem: "Erro ao atualizar fazenda." };
+    return { sucesso: false, mensagem: "Fazenda não encontrada." };
   }
 };
 
-// Função para remover uma fazenda
 export const remover = async (id) => {
   try {
     const response = await axios.delete(`${url}/fazendas/${id}`);
@@ -34,9 +31,8 @@ export const remover = async (id) => {
   }
 };
 
-// Exportação de múltiplas funções
 export default {
   buscarTodas,
-  atualizar,
+  filtrar,
   remover,
 };

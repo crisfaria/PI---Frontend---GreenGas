@@ -1,72 +1,81 @@
-/* Estilos gerais para o footer */
+/* Estilos do Footer */
 .footer {
-  background-color: #2e8b57; /* Cor de fundo escura */
-  color: white; /* Texto branco */
-  padding: 20px 1; /* Espaçamento superior e inferior */
-  font-family: 'Arial', sans-serif; /* Fonte padrão */
-  font-size: 14px; /* Tamanho de fonte padrão */
-  text-align: center; /* Centraliza o conteúdo */
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px; /* Limita a largura */
-  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
-  padding: 0 20px; /* Adiciona espaçamento nas laterais */
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Alinha tudo ao centro */
-  gap: 75px; /* Espaço entre os elementos */
-  justify-content:space-evenly ;
-}
-
-
-.branding {
-  font-size: 14px; /* Tamanho da fonte para as informações de branding */
-}
-
-.copyright {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.rights {
-  font-size: 12px;
-  opacity: 0.8; /* Um pouco de transparência */
-}
-
-.developer {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.developer-info {
-  display: flex;
-  align-items: center;
-
-}
-
-.developer-info span {
-  margin-left: 8px; /* Espaço entre o logo e o nome da empresa */
-}
-
-.icon {
-  width: 40px; /* Tamanho pequeno do logo */
-  height: auto; /* Mantém a proporção do logo */
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
+  background-color: #2e8b57;
+  padding: 10px 20px; /* Espaço interno ajustado */
+  color: white;
   font-size: 14px;
-  transition: color 0.3s;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
 
-.contact:hover {
-  color: #000000; /* Cor de destaque ao passar o mouse */
+/* Container para o conteúdo do footer */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+  justify-content: space-between; /* Espaça os itens (esquerda, centro, direita) */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%; /* Garante que o container não ultrapasse os limites */
+}
+
+/* Copyright alinhado à esquerda */
+.copyright {
+  text-align: left;
+  font-size: 12px;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+/* Logo e texto "Desenvolvido por C.R.I.S" centralizados */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+.footer-logo .icon {
+  width: 70px; /* Tamanho da logo */
+  height: auto;
+}
+
+.developer-text {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #dcdcdc;
+}
+
+/* E-mail à direita */
+.contact {
+  font-size: 14px;
+  text-align: right;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+.contact-email {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  color: #dcdcdc;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    text-align: center;
+  }
+
+  .copyright, .footer-logo, .contact {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens */
+    flex: unset; /* Remove o comportamento flex em telas pequenas */
+  }
 }
