@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistorico } from "../components/HistoricoContext";
+import { useHistorico } from "./HistoricoContext";
 import "./Relatorio.css";
 
 function Relatorio() {
