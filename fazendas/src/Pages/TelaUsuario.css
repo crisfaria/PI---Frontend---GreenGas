@@ -1,0 +1,42 @@
+/* Define o estilo global para o layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que a altura seja 100% da janela */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+  }
+  
+  /* O contêiner principal da página */
+  main {
+    flex: 1; /* Faz com que o main ocupe o espaço restante entre o header e o footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo no eixo vertical */
+    padding: 20px; /* Espaçamento interno para o conteúdo principal */
+    box-sizing: border-box; /* Inclui o padding no tamanho total */
+  }
+  
+  /* Estilo do footer */
+  footer {
+    background-color: #2e8b57;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do header */
+  header {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  

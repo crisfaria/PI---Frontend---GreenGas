@@ -1,0 +1,38 @@
+{
+  "fazendas": [
+    {
+      "id": "1",
+      "nome": "Fazenda Boa Vista",
+      "localizacao": "São Paulo",
+      "tamanho": 350
+    },
+    {
+      "id": "8230",
+      "nome": "Canto da Sereia",
+      "localizacao": "Vicente Pires",
+      "tamanho": 90000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "d94a",
+      "nome": "Karlos",
+      "localizacao": "Sudoeste",
+      "tamanho": 10000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "57f7",
+      "nome": "Cris",
+      "localizacao": "Asa Sul",
+      "tamanho": 2999,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    },
+    {
+      "id": "caa1",
+      "nome": "ddd",
+      "localizacao": "ddd",
+      "tamanho": 3222,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg"
+    }
+  ]
+}
