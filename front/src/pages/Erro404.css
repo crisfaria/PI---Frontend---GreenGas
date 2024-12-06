@@ -1,0 +1,36 @@
+/* Estilo básico para a página de erro 404 */
+.erro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa toda a altura da tela */
+  background-color: #f8f9fa; /* fundo claro */
+  font-family: "Arial", sans-serif;
+}
+
+.erro-container h1 {
+  font-size: 11rem;
+  color: #2e8b57; /* cor vermelha para o número 404 */
+  margin-bottom: 10px;
+}
+
+.erro-container p {
+  font-size: 1.7rem;
+  color: #555; /* cor para o texto */
+}
+
+.erro-container a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #007bff; /* cor azul para link */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+.erro-container a:hover {
+  background-color: #007bff;
+  color: white;
+}

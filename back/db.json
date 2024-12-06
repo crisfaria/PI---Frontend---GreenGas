@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "email": "cris@teste.com",
+      "password": "$2a$10$hCmd23g/Jf7EgxJM2Du9KOogRP9IEjZCFWZRgfyHErdnNplm.YIGW",
+      "nome": "Cristina",
+      "dataNascimento": "2024-12-05",
+      "id": 1
+    },
+    {
+      "email": "bia@teste.com",
+      "password": "$2a$10$ZZK7J0ra9zw.xTedQNTzCOQiIzXxdtdipWrSDzq57xWt1k.iCyDWq",
+      "nome": "Bia",
+      "dataNascimento": "2024-12-03",
+      "id": 2
+    },
+    {
+      "email": "cristina@email.com",
+      "password": "$2a$10$/RwdSc9hnJNyYXpgIeRroOKPb6qIJ4SYDH/hpPPM/EbnJduCXf7ke",
+      "nome": "Cristina",
+      "dataNascimento": "2024-12-03",
+      "id": 3
+    },
+    {
+      "email": "iesb@email.com",
+      "password": "$2a$10$UgkwNL2tpN5FRZkrKMy4MeT6x75sZ4V7/gxgWV64DLwep.MMtvxA6",
+      "nome": "Iesb",
+      "dataNascimento": "2024-12-05",
+      "id": 4
+    }
+  ],
+  "fazendas": [
+    {
+      "nome": "Bia's Farm",
+      "localizacao": "Asa sul",
+      "tamanho": 10000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Fazendinha Feliz",
+      "localizacao": "Asa Norte",
+      "tamanho": 1000,
+      "imagem": "../src/image/istockphoto-863542630-612x612.jpg",
+      "id": 2
+    }
+  ]
+}
