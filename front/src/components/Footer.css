@@ -1,0 +1,83 @@
+/* Estilos do Footer */
+.footer {
+  background-color: #2e8b57;
+  padding: 10px 20px; /* Espaço interno ajustado */
+  color: white;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Container para o conteúdo do footer */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+  justify-content: space-between; /* Espaça os itens (esquerda, centro, direita) */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%; /* Garante que o container não ultrapasse os limites */
+}
+
+/* Copyright alinhado à esquerda */
+.copyright {
+  text-align: left;
+  font-size: 12px;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+/* Logo e texto "Desenvolvido por C.R.I.S" centralizados */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+.footer-logo .icon {
+  width: 70px; /* Tamanho da logo */
+  height: auto;
+}
+
+.developer-text {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #dcdcdc;
+}
+
+/* E-mail à direita */
+.contact {
+  font-size: 14px;
+  text-align: right;
+  flex: 1; /* Adapta o tamanho em dispositivos menores */
+}
+
+.contact-email {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  color: #dcdcdc;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    text-align: center;
+  }
+
+  .copyright,
+  .footer-logo,
+  .contact {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens */
+    flex: unset; /* Remove o comportamento flex em telas pequenas */
+  }
+}
