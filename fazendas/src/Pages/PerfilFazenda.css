@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Estilo do main */
+  main.perfil-fazenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Estilo do contêiner da imagem */
+  .perfil-fazenda-imagem-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Cor de fundo para o caso de não haver imagem */
+  }
+  
+  /* Estilo da imagem */
+  .perfil-fazenda-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner redondo */
+  }
+  
+  /* Estilo da seção de detalhes */
+  .perfil-fazenda-detalhes {
+    max-width: 300px; /* Define o tamanho máximo da caixa de dados */
+    width: 100%; /* Garante que a caixa ocupe toda a largura disponível no celular */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .perfil-fazenda-detalhes h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .perfil-fazenda-detalhes p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .perfil-fazenda-detalhes button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #45a049;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .perfil-fazenda-detalhes button:hover {
+    background-color: #45a049;
+  }
+  
