@@ -1,18 +1,18 @@
-import React from 'react';
 import Header from "../components/Header";
-import Relatorio from "../pages/Relatorio";
+import Calculator from "../components/Calculator";
 import Footer from "../components/Footer";
 
-function Historico() {
+
+function Calc() {
   return (
     <div>
       <Header />
       <main>
-        <Relatorio />
+        <Calculator />
       </main>
       <Footer/>
     </div>
   );
 }
 
-export default Historico;
+export default Calc;

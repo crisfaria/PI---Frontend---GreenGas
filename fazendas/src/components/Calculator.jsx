@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Calculator.css";
-import { useHistorico } from "./HistoricoContext";
+import { useHistorico } from "../components/HistoricoContext";
 
 function Calculator() {
   const { adicionarAoHistorico } = useHistorico();

@@ -3,7 +3,7 @@ import { useHistorico } from "../components/HistoricoContext";
 import "./Relatorio.css";
 
 function Relatorio() {
-  const { historico, adicionarAoHistorico } = useHistorico(); // Usa o contexto de histórico
+  const { historico, adicionarAoHistorico } = useHistorico();
   const [filteredHistory, setFilteredHistory] = useState(historico);
   const [filtro, setFiltro] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
@@ -11,7 +11,7 @@ function Relatorio() {
 
   useEffect(() => {
     setFilteredHistory(historico);
-  }, [historico]); // Atualiza o histórico filtrado sempre que o histórico global mudar
+  }, [historico]);
 
   const trataFiltrar = (valor) => {
     setFiltro(valor);
@@ -37,16 +37,34 @@ function Relatorio() {
     const confirmarExclusao = window.confirm("Deseja excluir os itens selecionados?");
     if (confirmarExclusao) {
       const novoHistorico = historico.filter((item) => !selectedItems.includes(item.id));
-      adicionarAoHistorico(novoHistorico); // Atualiza o histórico global
+      adicionarAoHistorico(novoHistorico);
+      setFilteredHistory(novoHistorico);
       setSelectedItems([]);
     }
   };
 
+  const handleDeleteSingle = (id) => {
+    const confirmarExclusao = window.confirm("Deseja excluir este item?");
+    if (confirmarExclusao) {
+      const novoHistorico = historico.filter((item) => item.id !== id);
+      adicionarAoHistorico(novoHistorico);
+      setFilteredHistory(novoHistorico);
+    }
+  };
+
   const toggleSelectItem = (id) => {
-    if (selectedItems.includes(id)) {
-      setSelectedItems(selectedItems.filter((itemId) => itemId !== id));
+    setSelectedItems((prevSelectedItems) =>
+      prevSelectedItems.includes(id)
+        ? prevSelectedItems.filter((itemId) => itemId !== id)
+        : [...prevSelectedItems, id]
+    );
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedItems.length === filteredHistory.length) {
+      setSelectedItems([]);
     } else {
-      setSelectedItems([...selectedItems, id]);
+      setSelectedItems(filteredHistory.map((item) => item.id));
     }
   };
 
@@ -76,20 +94,14 @@ function Relatorio() {
               <th className="px-4 py-3">
                 <input
                   type="checkbox"
-                  onChange={(e) =>
-                    setSelectedItems(
-                      e.target.checked ? filteredHistory.map((item) => item.id) : []
-                    )
-                  }
-                  checked={
-                    selectedItems.length > 0 &&
-                    selectedItems.length === filteredHistory.length
-                  }
+                  onChange={toggleSelectAll}
+                  checked={selectedItems.length > 0 && selectedItems.length === filteredHistory.length}
                 />
               </th>
               <th className="px-4 py-3 text-left">Data</th>
               <th className="px-4 py-3 text-left">Quantidade de Gado</th>
               <th className="px-4 py-3 text-left">Resultados</th>
+              <th className="px-4 py-3 text-left">Ações</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
@@ -108,6 +120,14 @@ function Relatorio() {
                   {Object.entries(entry.results)
                     .map(([key, value]) => `${key}: ${value.toFixed(2)} m³`)
                     .join(", ")}
+                </td>
+                <td className="px-4 py-3">
+                  <button
+                    onClick={() => handleDeleteSingle(entry.id)}
+                    className="bg-red-600 text-white px-3 py-1 rounded-lg"
+                  >
+                    Excluir
+                  </button>
                 </td>
               </tr>
             ))}
