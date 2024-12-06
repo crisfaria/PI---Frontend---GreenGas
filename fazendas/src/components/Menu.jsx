@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.css"; // Importando o arquivo CSS para estilizar o Menu
 import Avatar from "../image/Avatar.jpg"; // Caminho correto para a imagem
